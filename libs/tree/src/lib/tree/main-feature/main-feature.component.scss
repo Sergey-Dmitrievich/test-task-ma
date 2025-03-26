@@ -1,0 +1,121 @@
+
+
+img{
+  width: 18px;
+  height: auto;
+}
+.tree{
+  width: 100%;
+  height: 90dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.name--title{
+  margin-top: 2%;
+}
+.--gray{
+  color: var(--gray);
+}
+.name-title__name{
+  margin-top: 10px;
+}
+.name-title__name{
+  margin-left: 23px;
+  margin-bottom: 5px;
+}
+.level{
+  margin-left: 23px;
+}
+
+
+// Дальше пример не самого хорошего кода, лучше конечно было бы оптимизировать и уменьшить его
+
+
+
+
+
+
+.item--children{
+  margin-top: 20px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item--notChildren{
+  margin-top: 20px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item2--children{
+  margin-top: 20px;
+  margin-left: 30px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item2--notChildren{
+  margin-top: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item3--children{
+  margin-top: 20px;
+  margin-left: 60px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item3--notChildren{
+  margin-top: 20px;
+  margin-left: 80px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item4--children{
+  margin-top: 20px;
+  margin-left: 90px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item4--notChildren{
+  margin-top: 20px;
+  margin-left: 110px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item5--children{
+  margin-top: 20px;
+  margin-left: 120px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item5--notChildren{
+  margin-top: 20px;
+  margin-left: 140px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item6--children{
+  margin-top: 20px;
+  margin-left: 150px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item6--notChildren{
+  margin-top: 20px;
+  margin-left: 170px;
+  cursor: pointer;
+  color: var(--green);
+}
+.item7--children{
+  margin-top: 20px;
+  margin-left: 180px;
+  cursor: pointer;
+  color: var(--dark-gold);
+}
+.item7--notChildren{
+  margin-top: 20px;
+  margin-left: 200px;
+  cursor: pointer;
+  color: var(--green);
+}

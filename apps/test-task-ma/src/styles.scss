@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --light-colot: #f5f5f5;
+  --index: calc(1vw + 1vh);
+  --little-font: 16px;
+  --big-font: 24px;
+  --middle-font: 18px;
+  --middle-big-font: 20px;
+  --primary-color: rgb(155, 140, 230);
+  --gray: gray;
+  --light-gray: rgb(209, 209, 209);
+  --dark-color: black;
+  --little-little-font: 13px;
+  --middle-gray: rgb(128, 128, 128, 0.5);
+  --green: #22ad40;
+  --dark-gold: #b8860b;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--light-colot);
+  background: radial-gradient(circle, #000000 0%, #0f0c1d 50%, #302b63 100%)
+    fixed;
+  font-size: var(--big-font);
+  font-family: Space-big;
+}
+
+@font-face {
+  font-family: Space-big;
+  font-style: normal;
+  src: url(/Raleway-Light.ttf);
+}
+
