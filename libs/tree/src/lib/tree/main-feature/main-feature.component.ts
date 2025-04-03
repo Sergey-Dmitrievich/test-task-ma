@@ -4,16 +4,20 @@ import { ITree, TreeDataService } from '@ma/shared';
 import { Store } from '@ngrx/store';
 import { selectAllTreeNodes, loadTreeNodes } from '@ma/store';
 import { AsyncPipe } from '@angular/common';
+import { TreeComponent } from "./tree-feature/tree.component";
 
 @Component({
   selector: 'lib-tree-feature-main',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, TreeComponent],
   templateUrl: './main-feature.component.html',
   styleUrls: ['./main-feature.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainFeatureComponent implements OnInit  {
+toggle(_t3: any) {
+  throw new Error('Method not implemented.');
+}
   //Тут особо пояснять нечего я думаю
   treeNodes$: Observable<ITree[]> | undefined;
 
@@ -29,14 +33,5 @@ export class MainFeatureComponent implements OnInit  {
 
   }
 
-  //Это уже для изменения состояния узлов, это отедельный массив объектов
-  isChildrenUpdate(id: number){
-    const currentValue = this.all[id].isChildren();
-    this.all[id].isChildren.set(!currentValue);
-  }
-  //Это уже для получения состояния узлов
-  isChildren(id: number){
-    return this.all[id].isChildren();
-  }
 
 }
