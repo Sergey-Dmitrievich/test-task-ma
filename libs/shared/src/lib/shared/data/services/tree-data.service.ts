@@ -1,5 +1,5 @@
 import { Injectable, signal } from "@angular/core";
-import { ITree } from "../interfaces/main.interface";
+import { Tree } from "../interfaces/tree.interface";
 import { Observable, of } from "rxjs";
 
 
@@ -12,7 +12,7 @@ export class TreeDataService {
 //Отсюда мы берём данные, как будто с сервера, чтобы веселее было
 
 
-treeNodes: ITree[] = [
+treeNodes: Tree[] = [
   {
     "id": 1,
     "title": "Значение 1",
@@ -108,53 +108,5 @@ treeNodes: ITree[] = [
     ]
   }
 ]
-//  Для развлечения симитируем отправку данных с сервера
-  getTreeNodes(): Observable<ITree[]> {
-    return of(this.treeNodes);
-  }
 
-  all = [
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-    {
-      isChildren: signal(false)
-    },
-  ]
 }

@@ -11,6 +11,6 @@
       TEST-TASK-MA
     </div>
   </div>
-  @if(treeNodes$ | async; as treeNodes){
+  @if(all; as treeNodes){
     <lib-tree-feature-tree [nodes]="treeNodes"/>
   }
