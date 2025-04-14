@@ -9,7 +9,6 @@ import { Observable, of } from "rxjs";
 export class TreeDataService {
 
 
-//Отсюда мы берём данные, как будто с сервера, чтобы веселее было
 
 
 treeNodes: Tree[] = [
