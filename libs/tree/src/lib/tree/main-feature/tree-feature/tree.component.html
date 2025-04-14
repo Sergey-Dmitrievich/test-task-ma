@@ -4,9 +4,9 @@
 <div>
   @for(node of nodes; track node.id){
     <div>
-      <!-- Применение класса через [class] -->
+      
       <div [class.deleted]="node.is_deleted">
-        <!-- Если есть дети, показываем стрелку, кликом переключаем состояние -->
+        
         @if(node.children && node.children.length > 0){
           <span
             (click)="toggle(node)"
@@ -14,7 +14,7 @@
             {{ expanded[node.id] ? '▲' : '▼' }}
           </span>
         }
-        <!-- Если детей нет, используется отступ -->
+      
         @else {
           <span class="spacer"></span>
         }
@@ -22,7 +22,7 @@
         {{ node.id }} - {{ node.title }}
       </div>
 
-      <!-- Рекурсивно снова вызываем наш компонент если есть дети -->
+    
       @if(node.children && node.children.length > 0 && expanded[node.id]){
         <div class="child-nodes">
           <lib-tree-feature-tree [nodes]="node.children"></lib-tree-feature-tree>
