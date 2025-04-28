@@ -10,5 +10,10 @@
     </div>
   </div>
   @if(all; as treeNodes){
-    <lib-tree-feature-tree [nodes]="treeNodes"/>
+    <app-tree-node
+    [nodes]="treeNodes"
+    [expanded]="expanded"
+    (toggle)="onToggle($event)"
+
+    />
   }
