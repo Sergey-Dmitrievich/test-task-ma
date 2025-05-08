@@ -1,34 +1,24 @@
-<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
-<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
-
 <div>
   @for(node of nodes; track node.id){
     <div>
-
       <div [class.deleted]="node.is_deleted">
-
-        @if(node.children){
+        @if(node.children.length){
           <span
           (click)="onToggle(node)">
-          {{ expanded[node.id] ? '▲' : '▼' }}
-
+          {{ node.expanded ? '▲' : '▼' }}
           </span>
         }
-
         @else {
           <span class="spacer"></span>
         }
-
         {{ node.id }} - {{ node.title }}
       </div>
-
-
-      @if(node.children && node.children.length > 0 && expanded[node.id]){
+      @if(node.children && node.children.length && node.expanded){
         <div class="child-nodes">
           <app-tree-node
           [nodes]="node.children"
           [expanded]="expanded"
-          (toggle)="toggle.emit($event)">
+          (onToggleNode)="onToggleNode.emit($event)">
           >
           </app-tree-node>
         </div>

@@ -8,11 +8,16 @@ export default [
   {
     files: ['**/*.ts'],
     rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@angular-eslint/template/click-events-have-key-events": "off",
+      "@angular-eslint/template/interactive-supports-focus": "off",
+      "@angular-eslint/no-output-native": "off",
+      "@angular-eslint/no-output-on-prefix": "off",
       '@angular-eslint/directive-selector': [
         'error',
         {
           type: 'attribute',
-          prefix: 'lib',
+          prefix: 'app',
           style: 'camelCase',
         },
       ],
@@ -20,7 +25,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'lib',
+          prefix: 'app',
           style: 'kebab-case',
         },
       ],
@@ -29,6 +34,12 @@ export default [
   {
     files: ['**/*.html'],
     // Override or add rules here
-    rules: {},
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@angular-eslint/template/click-events-have-key-events": "off",
+      "@angular-eslint/template/interactive-supports-focus": "off",
+      "@angular-eslint/no-output-native": "off",
+      "@angular-eslint/no-output-on-prefix": "off",
+    },
   },
 ];

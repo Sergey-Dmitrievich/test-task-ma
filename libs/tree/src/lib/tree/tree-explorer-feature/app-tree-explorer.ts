@@ -2,27 +2,16 @@ import { ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { TreeComponent } from "../tree-feature/tree.component";
-
-interface Tree {
-  id: number
-  title: string
-  is_deleted?: boolean
-  deleted_at?: string | null
-  children: Tree[] | []
-}
+import { Tree } from '../tree-feature/data/tree.interface';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'app-tree-explorer',
-  standalone: true,
   imports: [AsyncPipe, TreeComponent],
   templateUrl: './app-tree-explorer.html',
-  styleUrls: ['./app-tree-explorer.scss'],
+  styleUrl: './app-tree-explorer.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TreeExplorerComponent {
-
-
 
   all: Tree[] = [
     {
@@ -123,10 +112,8 @@ export class TreeExplorerComponent {
 
   expanded: Record<number, boolean> = {};
 
-
   onToggle(node: Tree) {
-    this.expanded[node.id] = !this.expanded[node.id];
+    node.expanded = !node.expanded;
   }
-
 
 }
